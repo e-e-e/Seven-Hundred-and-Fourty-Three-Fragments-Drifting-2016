@@ -1,0 +1,13 @@
+{
+  "name": "Seven Hundred and Fourty Three Fragments, Drifting 2016",
+  "version": "0.0.0",
+  "author":"Benjamin Forster and Sarah Rodigari",
+  "description": "During May 2016, Seven Hundred and Fourty Three Fragments Drifting, 2016, was hosted on the Biennale of Sydney's website as a project of the Bureau of Writing, created by participating artists Benjamin Forster and Sarah Rodigari. Through this digital intervention, the artists altered normal reading behaviours by editing their texts – written during Bureau of Writing workshops in February and March this year – through custom code that caused their words to cascade down the screen. While distracting visitors from the informative function of the website, this abstract, slow-time reading exercise also illustrated the ‘in-between’ and partial status of the Bureau of Writing. The Bureau began in September 2015, accompanied the 20th Biennale in its lead up, witnesses the exhibition and concludes with the Biennale in June 2016 – both part of and observer of this edition.",
+  "manifest_version": 2,
+  "permissions": ["<all_urls>"],
+  "content_scripts": [{
+    "matches": ["http://*.biennaleofsydney.com.au/*", "https://*.biennaleofsydney.com.au/*"],
+    "js": ["jquery.min.js", "fragments.js"],
+    "run_at": "document_start"
+  }]
+}
